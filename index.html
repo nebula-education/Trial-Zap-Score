@@ -405,7 +405,10 @@ canvas#confetti{position:absolute;inset:0;pointer-events:none;z-index:0}
 </div>
 
 <script>
-const WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbwj4V_3-rhRyalyrc5W5HND4OM1oDuO3REl9p-LBH0lYpzyh8pQaTT06mtvDPs6kjQS/exec';
+// ─── ВСТАВТЕ СЮДИ URL ДЕПЛОЮ З APPS SCRIPT ──────────────────────────────────
+// Apps Script → Deploy → New deployment → Web app → Copy URL і вставте нижче
+const WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbyHHW53mfnoG-i7cMyUZjk3c_4Q5kQjOIdhJJ6n5AeKcAq8lltsHyFMwoeOITopwXF2/exec';
+// ─────────────────────────────────────────────────────────────────────────────
 
 let advisorName = '', advisorEmail = '';
 let timeLeft = 180, timerInterval = null;
@@ -693,7 +696,7 @@ function launchConfetti(score) {
 async function sendToSheets(total, feedbackText, responseSeconds) {
   if (!WEBHOOK_URL) return;
   const payload = {
-    sheetTarget: 'trial',
+    sheetTarget: 'trial_zap',
     practiceName: 'AI Trial Chat Simulation (Zapier)',
     timestamp: new Date().toISOString(),
     advisorName, advisorEmail,
