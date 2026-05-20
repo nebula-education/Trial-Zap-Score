@@ -36,8 +36,8 @@ html,body{height:100%;background:var(--bg);font-family:Inter,system-ui,sans-seri
 /* INTRO */
 #screen-intro{flex-direction:column;align-items:center;justify-content:flex-start;padding:0;background:#F0EDE6;overflow-y:auto}
 .intro-topbar{width:100%;display:flex;align-items:center;gap:8px;padding:18px 32px;flex-shrink:0}
-.intro-topbar img{height:22px}
-.intro-topbar-brand{font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#6F70F6}
+.intro-topbar img{height:30px}
+.intro-topbar-brand{font-size:13px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#6F70F6}
 .intro-body{width:100%;max-width:560px;margin:0 auto;padding:16px 24px 48px;animation:fadeUp .5s ease both}
 .intro-title{font-family:Georgia,serif;font-size:clamp(1.7rem,3.5vw,2.4rem);font-weight:400;color:#111827;line-height:1.2;margin-bottom:20px}
 .intro-desc{font-size:14px;color:#374151;line-height:1.85;margin-bottom:28px}
@@ -217,14 +217,13 @@ canvas#confetti{position:absolute;inset:0;pointer-events:none;z-index:0}
 <!-- INTRO -->
 <div class="screen active" id="screen-intro">
   <div class="intro-topbar">
-    <img src="data:image/png;base64,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" alt="Nebula">
+    <img src="data:image/png;base64,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" alt="Nebula" style="height:30px;filter:invert(42%) sepia(98%) saturate(500%) hue-rotate(210deg) brightness(95%)">
     <span class="intro-topbar-brand">Nebula</span>
   </div>
   <div class="intro-body">
     <h1 class="intro-title">AI Trial Chat<br>Simulation</h1>
-    <div class="intro-desc">You've already put in the work. You've practiced, reflected, improved, and grown. This module isn't about "passing or failing" — it's about stepping into your role with confidence and experiencing what real sessions feel like.<br><br>
-    Think of it as your transition moment: moving from a training environment into live energy. Not a stressful exam, but a focused and meaningful experience where you get to demonstrate your readiness.<br><br>
-    To keep it authentic, this experience is available only once. Not to create pressure — but to encourage presence, intention, and trust in your skills.</div>
+    <div class="intro-desc">You've already given this journey your time, your attention, and your heart. You've practiced, explored, made adjustments, and grown along the way. This module isn't here to measure you — it's here to gently invite you into the next step of your professional path.<br><br>
+    Think of it as a soft transition from learning into living practice. Not an exam. Not a moment to prove yourself. Just a safe space to experience what a real session feels like — while still knowing you are supported.</div>
 
     <div class="accordion">
       <button class="accordion-btn" onclick="toggleAccordion(this)">
@@ -232,8 +231,8 @@ canvas#confetti{position:absolute;inset:0;pointer-events:none;z-index:0}
         <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="accordion-body">
-        The session is with one client — Annabelle. Before the chat begins, you'll see a short summary about her. This gives you a moment to orient yourself, understand the context, and prepare your approach — just like reviewing a brief before a live session.<br><br>
-        The session itself lasts exactly 3 minutes. After the timer ends, you'll have one additional message to close the session thoughtfully and with intention.
+        You'll have a session with the client Annabelle. Before the chat begins, you'll see a short summary about her. Take a quiet moment with it. Let yourself understand who she is, what she might be feeling, and how you'd like to meet her. There's no rush in those first seconds — just awareness and intention.<br><br>
+        The live chat will last exactly 3 minutes. Within that time, simply focus on being present, attentive, and clear. After the timer ends, you'll have one final message to close the session thoughtfully — a gentle way to leave warmth and depth behind you. After this write <strong>END SESSION</strong> to the bot and get your personal feedback. Copy your score and feedback before the next step and save your results.
       </div>
     </div>
 
@@ -244,16 +243,16 @@ canvas#confetti{position:absolute;inset:0;pointer-events:none;z-index:0}
       </button>
       <div class="accordion-body">
         <ul>
-          <li><strong>🔮 Answer Sufficiency</strong> — Did your reading clearly respond to the client's question? Specific, grounded insights demonstrate clarity and confidence. Avoid staying too general — depth creates impact.</li>
-          <li><strong>💜 Empathy</strong> — Did you genuinely tune into the client's emotional state? Naming feelings specifically and reflecting them back shows presence and emotional intelligence.</li>
-          <li><strong>⚡ First Response Speed</strong> — Your first message should arrive within 7 seconds. A timely opening builds trust and signals attentiveness.</li>
-          <li><strong>🔗 Engagement</strong> — Do you guide the conversation deeper with thoughtful clarifying questions? Strong engagement creates connection and encourages the client to stay.</li>
-          <li><strong>✨ Intrigue at the End</strong> — Your final message should leave the client wanting to continue. It should feel meaningful, valuable, and worth returning for.</li>
+          <li><strong>🔮 Answer Sufficiency</strong> — Did your response truly address her question? Even one clear, grounded insight can feel powerful when it's sincere and specific.</li>
+          <li><strong>💜 Empathy</strong> — Did you notice what she might be feeling beneath her words? When you reflect emotions with care and precision, the client feels understood — and that creates trust.</li>
+          <li><strong>⚡ First Response Speed</strong> — Your first message should arrive within 7 seconds. A calm and confident opening reassures the client that you're there with them.</li>
+          <li><strong>🔗 Engagement</strong> — Did you help the conversation unfold naturally? Thoughtful questions and soft guidance show that you're invested in understanding more, not just answering quickly.</li>
+          <li><strong>✨ Intrigue at the End</strong> — Your final message is your closing touch. It should feel meaningful, complete, and gently open the door for what could come next.</li>
         </ul>
       </div>
     </div>
 
-    <div class="intro-quote">This experience is available only once — not to create pressure, but to encourage full presence. Trust your preparation. You're ready for this next step.</div>
+    <div class="intro-quote">This moment happens only once — not to add pressure, but to make it intentional. Take a slow breath before you begin. Trust your preparation. Trust your sensitivity. You are ready to step into this with grace.</div>
 
     <button class="intro-btn" onclick="switchScreen('screen-intro','screen-login')">Begin →</button>
   </div>
@@ -302,10 +301,6 @@ canvas#confetti{position:absolute;inset:0;pointer-events:none;z-index:0}
         <div class="cbc-row">
           <span class="cbc-label">Emotional state:</span>
           <span class="cbc-value">I'm a bit worried or anxious 😖</span>
-        </div>
-        <div class="cbc-row">
-          <span class="cbc-label">Situation:</span>
-          <span class="cbc-value">Concerned about a man named Daniel — dating 4 months, lately distant</span>
         </div>
       </div>
       <div class="fmp">
@@ -398,15 +393,15 @@ canvas#confetti{position:absolute;inset:0;pointer-events:none;z-index:0}
     <div class="end-logo">
       <img src="data:image/png;base64,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" alt="Nebula">
     </div>
-    <div class="end-congrats">Nebula Academy · Simulation Complete</div>
-    <h2 class="end-title">Well done,<br><span id="end-advisor-name">Advisor</span>!</h2>
-    <div class="end-name">You've completed the Tarot Consultation Simulation</div>
+    <div class="end-congrats">Nebula Academy · Trial Chat Simulation</div>
+    <h2 class="end-title">You did it,<br><span id="end-advisor-name">Advisor</span>!</h2>
+    <div class="end-name">You've just completed your Trial Chat Simulation.<br>That took courage — and you showed up fully.</div>
     <div class="score-circle">
       <div class="score-num" id="score-num" style="color:var(--mint)">—</div>
       <div class="score-denom">/100</div>
       <div class="score-label-txt">Your Score</div>
     </div>
-    <div class="end-note">Your result has been recorded. Great work stepping into the advisor's role.</div>
+    <div class="end-note">Every session is a step forward. You're growing into this role with intention and grace. ✦</div>
   </div>
 </div>
 
